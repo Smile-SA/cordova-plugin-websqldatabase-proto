@@ -1,0 +1,5 @@
+C:\Users\Smile\Documents\mobile\webSqlDatabaseProto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\bin\Debug\CordovaDeploy.exe
+C:\Users\Smile\Documents\mobile\webSqlDatabaseProto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\bin\Debug\CordovaDeploy.pdb
+C:\Users\Smile\Documents\mobile\webSqlDatabaseProto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Smile\Documents\mobile\webSqlDatabaseProto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\CordovaDeploy.exe
+C:\Users\Smile\Documents\mobile\webSqlDatabaseProto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\CordovaDeploy.pdb

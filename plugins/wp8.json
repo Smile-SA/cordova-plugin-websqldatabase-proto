@@ -1,0 +1,1 @@
+{"prepare_queue":{"installed":[],"uninstalled":[]},"config_munge":{"config.xml":{"/*":{"<feature name=\"WebDatabase\"><param name=\"wp-package\" value=\"WebDatabase\" /></feature>":1}}},"installed_plugins":{"org.smile.websqldatabase.wpdb":{"PACKAGE_NAME":"{A4EE4177-BF46-402C-A2B5-179AE17B885A}"}},"dependent_plugins":{}}

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Deployment AppPlatformVersion="7.1" xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment">
+    <App Author="WebSqlDatabaseProto author" BitsPerPixel="32" Description="Apache Cordova for Windows Phone 7" Genre="apps.normal" ProductID="{9563577E-09D2-4DA5-8B50-6052CEAE9E96}" Publisher="WebSqlDatabaseProto" RuntimeType="Silverlight" Title="WebSqlDatabaseProto" Version="1.0.0" xmlns="">
+        <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+        </Capabilities>
+        <Tasks>
+            <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+        </Tasks>
+        <Tokens>
+            <PrimaryToken TaskName="_default" TokenID="WebSqlDatabaseProtoToken">
+                <TemplateType5>
+                    <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+                    <Count>0</Count>
+                    <Title>WebSqlDatabaseProto</Title>
+                </TemplateType5>
+            </PrimaryToken>
+        </Tokens>
+    </App>
+</Deployment>
