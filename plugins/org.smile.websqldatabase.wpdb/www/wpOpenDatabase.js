@@ -1,4 +1,4 @@
-cordova.define("org.smile.websqldatabase.wpdb.wpOpenDatabase", function(require, exports, module) {var cordova = require('cordova');
+var cordova = require('cordova');
 
 var utils = {};
 
@@ -254,14 +254,6 @@ var openDatabase = function(name, version, display_name, size) {
     return db;
 };
 
-
-
-
-
-
-
-
-
 /**
  * SQL result set object PRIVATE METHOD
  *
@@ -359,4 +351,4 @@ openDatabase.queryFinished = function(sqlResult){
 openDatabase.queryQueue = {};
 
 
-module.exports = openDatabase;});
+module.exports = openDatabase;

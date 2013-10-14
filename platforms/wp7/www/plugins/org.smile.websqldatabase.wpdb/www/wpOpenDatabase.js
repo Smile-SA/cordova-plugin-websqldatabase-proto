@@ -254,14 +254,6 @@ var openDatabase = function(name, version, display_name, size) {
     return db;
 };
 
-
-
-
-
-
-
-
-
 /**
  * SQL result set object PRIVATE METHOD
  *
