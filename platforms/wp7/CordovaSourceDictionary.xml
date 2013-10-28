@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This file is auto-generated, do not edit! -jm -->
 <CordovaSourceDictionary>
-    <FilePath Value="www\cordova.js"/>
     <FilePath Value="www\config.xml"/>
+    <FilePath Value="www\cordova.js"/>
     <FilePath Value="www\css\index.css"/>
     <FilePath Value="www\icon.png"/>
     <FilePath Value="www\img\logo.png"/>
@@ -58,7 +58,6 @@
     <FilePath Value="www\spec\lib\jasmine-1.2.0\jasmine.js"/>
     <FilePath Value="www\spec\lib\jasmine-1.2.0\MIT.LICENSE"/>
     <FilePath Value="www\spec.html"/>
-    <FilePath Value="www\plugins\org.smile.websqldatabase.wp7db\www\wp7db.js"/>
-    <FilePath Value="www\plugins\org.smile.websqldatabase.wp7db\www\wp7openDatabase.js"/>
+    <FilePath Value="www\plugins\org.smile.websqldatabase.wpdb\www\wpOpenDatabase.js"/>
     <FilePath Value="www\cordova_plugins.js"/>
 </CordovaSourceDictionary>

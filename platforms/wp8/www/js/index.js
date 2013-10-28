@@ -43,14 +43,14 @@ var app = {
         var db = window.openDatabase("proto", "1.0", "Proto DB", 1000000);
 
         function resetDB(tx) {
-            tx.executeSql('DROP TABLE IF EXISTS DEMO');
+            tx.executeSql('DELETE FROM DEMO');
             populateDB(tx);
         }
 
         function populateDB(tx) {
             tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+            tx.executeSql('INSERT OR REPLACE INTO DEMO (id, data) VALUES (1, "First row")');
+            tx.executeSql('INSERT OR REPLACE INTO DEMO (id, data) VALUES (2, "Second row")');
         }
         function insertIntoDB(tx) {
             tx.executeSql('INSERT INTO DEMO (id, data) VALUES ((SELECT MAX(id)+1 FROM DEMO), "row #"||((SELECT MAX(id) FROM DEMO)+1))', [],
@@ -62,10 +62,10 @@ var app = {
                 }
             );
         }
-        function readFromeDB(tx) {
+        function readFromDB(tx) {
             tx.executeSql('SELECT * FROM DEMO', [],
                 function(transaction, resultSet){
-                    displayRows(resultSet.rows.resultSet)
+                    displayRows(resultSet.rows)
                 },
                 function(transaction, error){
                     app.log("Error processing SQL: "+JSON.stringify(error));
@@ -74,8 +74,8 @@ var app = {
         }
         function displayRows(rows){
             var s = '';
-            for(var i in rows) {
-                var row = rows[i];
+            for(var i = 0 ; i < rows.length ; i++) {
+                var row = rows.item(i);
                 s += '<li>'+row.id+': '+row.data+'</li>';
             }
 
@@ -83,27 +83,27 @@ var app = {
 
             app.write(s);
         }
-        function errorCB(err) {
+        function errorDB(err) {
             app.log("Error processing SQL: "+JSON.stringify(err));
         }
-        function successCB() {
+        function successDB() {
         }
 
         function init() {
-            db.transaction(populateDB, errorCB, successCB);
-            db.transaction(readFromeDB, errorCB, successCB);
+            db.transaction(populateDB, errorDB, successDB);
+            db.transaction(readFromDB, errorDB, successDB);
         }
 
         init();
 
         window.reset = function(){
-            db.transaction(resetDB, errorCB, successCB);
-            db.transaction(readFromeDB, errorCB, successCB);
+            db.transaction(resetDB, errorDB, successDB);
+            db.transaction(readFromDB, errorDB, successDB);
         };
 
         window.addRows = function(){
-            db.transaction(insertIntoDB, errorCB, successCB);
-            db.transaction(readFromeDB, errorCB, successCB);
+            db.transaction(insertIntoDB, errorDB, successDB);
+            db.transaction(readFromDB, errorDB, successDB);
         };
     }
 };

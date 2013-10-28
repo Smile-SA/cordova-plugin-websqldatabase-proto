@@ -144,7 +144,6 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="config.xml" />
-        <Content Include="www\cordova.js" />
         <Content Include="Images\appbar.back.rest.png" />
         <Content Include="Images\appbar.close.rest.png" />
         <Content Include="Images\appbar.feature.video.rest.png" />
@@ -214,6 +213,9 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\config.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova.js" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\css\index.css" />

@@ -106,7 +106,6 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="config.xml" />
-        <Content Include="www\cordova.js" />
         <Content Include="Images\appbar.back.rest.png" />
         <Content Include="Images\appbar.close.rest.png" />
         <Content Include="Images\appbar.feature.video.rest.png" />
@@ -167,7 +166,23 @@
         </PostBuildEvent>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Newtonsoft.Json">
+            <HintPath>Plugins\org.smile.websqldatabase.wpdb\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="Community.CsharpSqlite.WP.Smile">
+            <HintPath>Plugins\org.smile.websqldatabase.wpdb\Community.CsharpSqlite.WP.Smile.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\org.smile.websqldatabase.wpdb\WebDatabase.cs" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www\config.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova.js" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\css\index.css" />
@@ -333,19 +348,6 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\spec.html" />
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="Newtonsoft.Json">
-            <HintPath>Plugins\org.smile.websqldatabase.wpdb\Newtonsoft.Json.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="Community.CsharpSqlite.WP.Smile">
-            <HintPath>Plugins\org.smile.websqldatabase.wpdb\Community.CsharpSqlite.WP.Smile.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Plugins\org.smile.websqldatabase.wpdb\WebDatabase.cs" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\plugins\org.smile.websqldatabase.wpdb\www\wpOpenDatabase.js" />
